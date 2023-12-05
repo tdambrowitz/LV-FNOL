@@ -225,7 +225,7 @@ def display_page():
 
         # Upload the image to the left-most column
         with col_img:
-            st.image("https://d2t2wfirfyzjhs.cloudfront.net/images/ex-desc/lv-logo.png")
+            st.image("https://s3-eu-west-1.amazonaws.com/tpd/logos/5a95521f54e2c70001f926b8/0x0.png")
 
 
         # Set the title in the middle column based on page selection
