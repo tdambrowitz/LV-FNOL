@@ -21,7 +21,7 @@ client = OpenAI()
 # Streamlit Configuration
 st.set_page_config(
     page_title="LV FNOL Test",
-    page_icon=":microphone:"
+    page_icon="https://th.bing.com/th/id/R.389f3cd5f1afc39763b8d89cb207a2ef?rik=Y8nCqV8eMmSYsg&pid=ImgRaw&r=0"
 )
 
 def get_state_variable(var_name, default_value):
