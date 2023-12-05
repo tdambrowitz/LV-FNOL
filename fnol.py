@@ -20,7 +20,7 @@ client = OpenAI()
 
 # Streamlit Configuration
 st.set_page_config(
-    page_title="Lightyear PO's",
+    page_title="LV FNOL Test",
     page_icon=":microphone:"
 )
 
@@ -248,7 +248,7 @@ def display_page():
                         minutes = meeting_minutes(full_transcription)
 
                         # Display meeting minutes details
-                        st.subheader("Meeting Minutes")
+                        st.subheader("Call Details")
                         for key, value in minutes.items():
                             st.markdown(f"#### {key.replace('_', ' ').title()}")
                             st.write(value)
@@ -257,7 +257,7 @@ def display_page():
                             st.write(abstract_summary_dict)
 
                         # Define the CSV file path
-                        csv_file_path = 'meeting_minutes.csv'
+                        csv_file_path = 'call_details.csv'
 
                         # Save the data as a CSV file
                         save_as_csv(abstract_summary_dict, csv_file_path)
