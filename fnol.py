@@ -230,7 +230,7 @@ def display_page():
 
         # Set the title in the middle column based on page selection
         with col_title:
-            st.header("Call Transcription and Generation")       
+            st.header("FNOL Generator")       
 
 
 
