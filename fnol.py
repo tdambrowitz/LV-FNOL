@@ -35,203 +35,6 @@ def get_state_variable(var_name, default_value):
 if 'is_authenticated' not in st.session_state:
     st.session_state.is_authenticated = False
 
-    
-suppliers = [
-    "ADT Fire and Security Plc",
-    "Advanced Radiators",
-    "Ancaster Group Ltd",
-    "Barons Automotive Ltd",
-    "Basingstoke MOT & Tyre Centre",
-    "Bassetts Citroen",
-    "Bassetts Honda",
-    "Baylis Vauxhall",
-    "Blade - Heritage Honda",
-    "Bradleys Honda",
-    "Breeze Volkswagen",
-    "Brighton Mitsubishi",
-    "Bristol Honda",
-    "Bristol Street Motors",
-    "Bristol Street Motors Gloucester",
-    "Brown Brothers Ltd - (PPG)",
-    "Caffyns Plc",
-    "Cambridge Accident Repair Centre",
-    "Cambridge Garage Ltd",
-    "Cars2 - Mazda & Hyundai",
-    "Cars2 - MG",
-    "Charles Trent Ltd",
-    "Cheltenham Borough Council",
-    "Circle Leasing Limited",
-    "Colne Tyre Centre",
-    "Copper Jax Contract Maintenance",
-    "Cotswold Motor Group Plc",
-    "Dave Daley",
-    "Days Motor Group",
-    "Diagnostec",
-    "Dick Lovett BMW Bristol",
-    "Dick Lovett BMW Swindon",
-    "Dick Lovett BMW Westbury",
-    "Dick Lovett Jaguar/Landrover",
-    "Dorset Autospares",
-    "Doves Vauhall",
-    "Drayton Group (Merc Benz of Stoke)",
-    "Drive",
-    "Dunns Automotive Ltd",
-    "Eastbourne Car Keys - Nicholas Prout",
-    "Eastbourne Tyre Co",
-    "Eden Basingstoke",
-    "Endeavour Volvo",
-    "Euro Car Parts",
-    "Evans Halshaw - Vauxhall",
-    "Express Motor Workshop",
-    "FG Barnes",
-    "Fish Brothers Toyota",
-    "Fordthorne Volvo",
-    "General Vehicle Services",
-    "Glyn Hopkin",
-    "Gray Scott Electrical Contractors Ltd",
-    "Grenson Motor Co Ltd (Acorn Group)",
-    "Group 1 - BMW",
-    "Group 1 - JLR",
-    "Group 1 - Mercedes",
-    "GSF Car Parts Limited",
-    "Harrats",
-    "Harwoods Chichester",
-    "Harwoods Pulborough",
-    "Havant Motor Factors",
-    "Hendy Group Ltd",
-    "Highways",
-    "Hills Salvage",
-    "Hl Motors Ltd",
-    "Holdcroft Honda Ltd",
-    "Holdcroft Hyundai Ltd",
-    "Holdcroft MG Stoke Ltd",
-    "Holdcroft Nissan Ltd",
-    "Holdcroft Renault Ltd",
-    "Honda Crown",
-    "Horizon Motor Company",
-    "HSF Group - Volvo",
-    "Hummingbird Motors",
-    "Inchcape Land Rover",
-    "Inchcape Toyota Guildford",
-    "Islington Motor Group",
-    "Jemca Lexus/Toyota Reading",
-    "J & J Motors",
-    "J&J Motors",
-    "Johnsons Ltd - Mazda",
-    "Johnsons Ltd - Toyota",
-    "Johnsons Ltd - Volvo",
-    "John Wilkins Cars",
-    "Ken Jervis",
-    "Kwik-Fit",
-    "Lansdown Mazda",
-    "Lightyear Test PO's",
-    "Listers Group",
-    "LKQ Coatings",
-    "Lookers Motor Group Ltd",
-    "Magna Mazda",
-    "Magna Motor Mistusubishi/Subaru",
-    "Managed Ink",
-    "Marshall Land Rover Newbury",
-    "Marshalls BMW Salisbury",
-    "Marshalls BMW Salisbury",
-    "Marshalls Lexus",
-    "Marshalls Mercedes Southampton",
-    "Martins Vw / Nissan / Volvo",
-    "Mercedes-Benz Bolton (Marshalls)",
-    "Mercedes Benz of Bristol (Sytner)",
-    "Mercedes-Benz of Southampton",
-    "Mercedes Benz Salisbury",
-    "Midhurst Engineering & Motor Co. Ltd",
-    "Minden Systems Ltd",
-    "Minster Cleaning",
-    "M & M Cleaning Services",
-    "Motorline",
-    "Motor Parts Direct Ltd",
-    "Motorscreen Ltd",
-    "MRG Volvo - Chippenham Motor Co",
-    "Office Watercoolers Ltd",
-    "One Offs",
-    "Pace Parts",
-    "Partridge BMW",
-    "Partsplus",
-    "Pentagon Lincoln",
-    "Penton Motor Group",
-    "Pinkstones",
-    "Platinum Hyundai",
-    "Platinum Hyundai",
-    "Platinum Nissan",
-    "Platinum Renault/Dacia",
-    "Platinum Toyota - Bath",
-    "Platinum Toyota - Trowbridge",
-    "Platinum Vauxhall - Trowbridge",
-    "Porsche Centre Portsmouth",
-    "PPG Industries (UK) Ltd - Pine Tree Consulting - Actiweb Fee",
-    "Prasco UK Ltd",
-    "Primrose Radar Calibration",
-    "Proven Motor Co Ltd",
-    "Recovery World Ltd",
-    "Renault Retail Group",
-    "Richmond Cars Ltd Bognor",
-    "Richmond Cars Ltd Fareham",
-    "Richmond Cars Ltd Portsmouth",
-    "Riverside Motors",
-    "Roadworthy Bristol",
-    "Rybrook JGL Stoke",
-    "Rybrook JGL Warrington",
-    "Rye Motors Limited",
-    "Rygor Mercedes-Benz",
-    "Sage UK",
-    "Sandal BMW Wakefield",
-    "Sandown Mercedes Salisbury",
-    "Screen Genies",
-    "SES Autoparts Ltd",
-    "SG Petch",
-    "Silverlake Automotive Recycling",
-    "Simpsons",
-    "Slated Barn Garage",
-    "Snows BMW / Mini",
-    "Snows Fiat / Alpha Romeo / Jeep",
-    "Snows Peugeot / Mazda",
-    "Snows Seat / Suzuki",
-    "Snows Toyota / Lexus",
-    "Snows Volvo / Kia",
-    "Soper BMW Lincoln",
-    "Spanesi Automotive Equipment Ltd",
-    "Stars Garage",
-    "Stellantis & You",
-    "Steven Eagell Toyota",
-    "Stoneacre Volvo Lincoln",
-    "Stonearce Fiat Lincoln",
-    "Stratstone Land Rover Cardiff",
-    "Synetiq Ltd",
-    "Sytner JLR Bristol",
-    "Sytner Mercedes",
-    "Test Supplier",
-    "TG Holdcroft - Mazda",
-    "Tomo Motor Parts Ltd",
-    "Tony Levoi",
-    "Tood Engineering",
-    "Trade Part Specialists Ltd",
-    "TW White & Sons",
-    "Uniplate Limited",
-    "Vantage Group Toyota",
-    "Vertu Honda - Lincoln",
-    "Vertu JLR - Bolton",
-    "Vertu JLR - Leeds",
-    "Vine ( Fisher German )",
-    "Vines BMW Guildford",
-    "Volvo Cars Poole",
-    "Warners Motor Group",
-    "Wessex Garages",
-    "West Riding Hyundai",
-    "Wheel Traders ltd",
-    "Williams BMW Manchester",
-    "WR Davies Motor Group",
-    "Yeomans Ltd Honda",
-    "Yeomans Ltd Nissan",
-    "Yeomans Ltd Toyota"
-]
-
 
 def display_page():
 
@@ -316,43 +119,59 @@ def display_page():
     def parse_text(transcription):
         prompt = (
             "Analyze the following transcription and output the extracted information as a structured dictionary with keys and values. "
-            "The keys are 'PO Number', 'Supplier Name', 'PO Date', 'PO Reference', 'PO Line Description', 'PO Line Qty', 'Unit Price', and 'Location'. "
-            "Each key should correspond to a value extracted from the transcription. PO Line Quantity will always be 1. If multiple parts are ordered format the value as a text string listing them.\n\n"
-            f"All Valid Suppliers:\n\"{suppliers}\"\n\n"
-            "You must use a supplier from this list, please select the closest match to the one in the transcription.\n\n"
+            "The keys are 'Claim Ref Number', 'Claimant', 'Images Requested', 'Mobile Number', 'Vehicle Registration', 'Make', 'Model', 'Incident Date', 'Incident Details', 'What Happened', 'Vehicle Status', 'Damage Description', 'Replacement Vehicle Required', and 'Excess Payable'. "
+            "Each key should correspond to a value extracted from the transcription. If multiple areas are damaged format the value as a text string listing them.\n\n"
             f"Please format the extracted information in a clear and structured manner as shown in the examples below.\n"
             "Example 1:\n"
             "{\n"
-            "    'PO Number': 'F23110071',\n"
-            "    'Supplier Name': 'Euro Car Parts',\n"
-            "    'PO Date': '28/11/2023',\n"
-            "    'PO Reference': 'MJ64LWU',\n"
-            "    'PO Line Description': 'Front Bumper and LH Headlamp',\n"
-            "    'PO Line Qty': '1',\n"
-            "    'Unit Price': '247.24',\n"
-            "    'Location': 'Crewe'\n"
+            "    'Claim Ref Number': '130-01-098978',\n"
+            "    'Claimant': 'Mrs. Jasmine Franklin',\n"
+            "    'Images Requested': 'No',\n"
+            "    'Mobile Number': '08902332303',\n"
+            "    'Vehicle Registration': 'NY68PWM',\n"
+            "    'Make': 'Kia',\n"
+            "    'Model': 'SPORTAGE 2 GDI',\n"
+            "    'Incident Date': '3 December 2023 20:00'\n"
+            "    'Incident Details': 'Hit Animal',\n"
+            "    'What Happened': 'PH was driving along when a dog has ran and and PH has hit into.Police passed by and blocked the roadThe dog had ran out the owners home and onto the road, the dog was taken to the vets and sadly passsed away.',\n"
+            "    'Vehicle Status': 'Not Roadworthy, Secure',\n"
+            "    'Damage Description': 'Front Offside Damage - Bumper, Wheel Arch.',\n"
+            "    'Replacement Vehicle Required': 'Yes',\n"
+            "    'Excess Payable': '£600.00'\n"
             "}\n\n"
             "Example 2:\n"
             "{\n"
-            "    'PO Number': 'A23110174',\n"
-            "    'Supplier Name': 'Brown Brothers',\n"
-            "    'PO Date': '28/11/2023',\n"
-            "    'PO Reference': 'HG21CZU',\n"
-            "    'PO Line Description': 'L/R Wheel and Arch Moulding',\n"
-            "    'PO Line Qty': '1',\n"
-            "    'Unit Price': '381.56',\n"
-            "    'Location': 'Amesbury'\n"
+            "    'Claim Ref Number': '930-01-0409274',\n"
+            "    'Claimant': 'Miss Robin Stevens',\n"
+            "    'Images Requested': 'No',\n"
+            "    'Mobile Number': '0975603618',\n"
+            "    'Vehicle Registration': 'SE15MYI',\n"
+            "    'Make': 'Toyota',\n"
+            "    'Model': 'AYGO X-PLAY VVT-I',\n"
+            "    'Incident Date': '27 November 2023 09:15'\n"
+            "    'Incident Details': 'Third Party Hit Insured',\n"
+            "    'What Happened': 'PH went out this morning and realised her car had been hit as her car has been damaged and vehicle doesn't go into reverse. TP is unknown and PH not at the scene when this incident occurred so PH not sure how this has happened.',\n"
+            "    'Vehicle Status': 'Mobile, Roadworthy, Secure',\n"
+            "    'Damage Description': 'Front Nearside Damage - Headlights, Wing, Wheel/Tyre/Alloy, Wheel Arch. Other Damage - Mechanical.',\n"
+            "    'Replacement Vehicle Required': 'Yes',\n"
+            "    'Excess Payable': '£270.00'\n"
             "}\n\n"
             "Example 3:\n"
             "{\n"
-            "    'PO Number': 'L23110065',\n"
-            "    'Supplier Name': 'Parts Plus',\n"
-            "    'PO Date': '28/11/2023',\n"
-            "    'PO Reference': 'T22EMY',\n"
-            "    'PO Line Description': 'Front Radar and Radiator',\n"
-            "    'PO Line Qty': '1',\n"
-            "    'Unit Price': '793.03',\n"
-            "    'Location': 'Cheltenham'\n"
+            "    'Claim Ref Number': '420-84-996873',\n"
+            "    'Claimant': 'Mr. Jeremy Rodgers',\n"
+            "    'Images Requested': 'Yes',\n"
+            "    'Mobile Number': '0899552133',\n"
+            "    'Vehicle Registration': 'HU14TJM',\n"
+            "    'Make': 'VOLKSWAGEN',\n"
+            "    'Model': 'GOLF GTI PERFORMANCE TSI 230 AUTO',\n"
+            "    'Incident Date': '12 November 2023 02:30'\n"
+            "    'Incident Details': 'Third Party Hit Insured',\n"
+            "    'What Happened': 'PHV was parked outside his house when TP has come round a corner and gone into PHV.PH was in bed at the time.Police and Ambulance was on scene.',\n"
+            "    'Vehicle Status': 'Immobile, Not Roadworthy, Secure',\n"
+            "    'Damage Description': 'Rear Offside Damage - Bumper, Wing, Wheel/Tyre/Alloy.',\n"
+            "    'Replacement Vehicle Required': 'No',\n"
+            "    'Excess Payable': '£0.00'\n"
             "}\n\n"
             "Now, based on the transcription provided, format the extracted information in a similar structured dictionary:\n\n"
             f"Transcription:\n\"{transcription}\""
