@@ -215,7 +215,25 @@ def display_page():
 
     def main():
         # Initialize Streamlit interface
-        st.title('Call Transcription and Generation')
+        #st.title('Call Transcription and Generation')
+
+
+
+
+        # Create columns for the image, title, and page selector
+        col_img, col_title = st.columns([2, 3])
+
+        # Upload the image to the left-most column
+        with col_img:
+            st.image("https://d2t2wfirfyzjhs.cloudfront.net/images/ex-desc/lv-logo.png")
+
+
+        # Set the title in the middle column based on page selection
+        with col_title:
+            st.title("Call Transcription and Generation")       
+
+
+
 
         # File uploader allows user to add their own audio
         uploaded_audio = st.file_uploader("Upload audio", type=["wav", "mp3", "m4a"])
