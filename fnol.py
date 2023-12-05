@@ -221,7 +221,7 @@ def display_page():
 
 
         # Create columns for the image, title, and page selector
-        col_img, col_title = st.columns([2, 3])
+        col_img, col_title = st.columns([1, 3])
 
         # Upload the image to the left-most column
         with col_img:
