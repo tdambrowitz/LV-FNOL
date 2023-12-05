@@ -543,7 +543,7 @@ def check_password():
 
         # Upload the image to the left-most column
         with col_img2:
-            st.image("https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe8f541d9-f3ab-433d-af42-6416222f11f7%2Flv3drgb.jpg?table=block&id=68c88f77-cad9-4e83-bad9-d2e630017be5&spaceId=99a703b7-a660-4095-b6d3-dd73cbc5a1ec&width=380&userId=d6a4f9af-79e1-4d26-8af5-cced5dc1eaa4&cache=v2")
+            st.image("https://d2t2wfirfyzjhs.cloudfront.net/images/ex-desc/lv-logo.png")
 
 
         # Determine the page selection using the selectbox in the right column
